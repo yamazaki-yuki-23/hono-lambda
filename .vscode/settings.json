@@ -1,0 +1,11 @@
+{
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/aws/serverless-application-model/main/samtranslator/schema/schema.json": [
+      "hono-lambda/template.yaml"
+    ]
+  },
+  "yaml.customTags": [
+    "!Sub scalar",
+    "!GetAtt scalar",
+  ]
+}
