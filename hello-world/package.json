@@ -9,6 +9,7 @@
   "scripts": {
     "unit": "jest",
     "lint": "eslint '*.ts' --quiet --fix",
+    "format": "prettier --write '*.ts'",
     "compile": "tsc",
     "test": "yarn run compile && yarn run unit"
   },
