@@ -9,7 +9,10 @@
       "moduleResolution":"node",
       "esModuleInterop": true, 
       "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,  
-    },
-    "exclude": ["node_modules", "**/*.test.ts"]
+      "forceConsistentCasingInFileNames": true,
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["*"]
+      }
+    }
   }

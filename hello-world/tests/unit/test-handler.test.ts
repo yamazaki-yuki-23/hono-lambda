@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals'
-import { app } from '../../app'
+import { app } from '@/app'
 
 describe('GET /hello', () => {
   it('returns hello world payload', async () => {

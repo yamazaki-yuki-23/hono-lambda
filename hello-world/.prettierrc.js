@@ -1,5 +1,5 @@
-module.exports = {
-    semi: false,
-    singleQuote: true,
-    printWidth: 120,
-  };
+export default {
+  semi: false,
+  singleQuote: true,
+  printWidth: 120,
+};
