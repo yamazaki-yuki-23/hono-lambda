@@ -1,16 +1,11 @@
-import { APIGatewayProxyResult } from 'aws-lambda'
-import { lambdaHandler } from '../../app'
-import { expect, describe, it } from '@jest/globals'
+import { describe, expect, it } from '@jest/globals'
+import { app } from '../../app'
 
-describe('Unit test for app handler', function () {
-  it('verifies successful response', async () => {
-    const result: APIGatewayProxyResult = await lambdaHandler()
+describe('GET /hello', () => {
+  it('returns hello world payload', async () => {
+    const res = await app.request('/hello', { method: 'GET' })
 
-    expect(result.statusCode).toEqual(200)
-    expect(result.body).toEqual(
-      JSON.stringify({
-        message: 'hello world',
-      })
-    )
+    expect(res.status).toBe(200)
+    await expect(res.json()).resolves.toEqual({ message: 'hello world' })
   })
 })
