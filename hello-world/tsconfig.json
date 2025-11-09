@@ -12,7 +12,8 @@
       "forceConsistentCasingInFileNames": true,
       "baseUrl": ".",
       "paths": {
-        "@/*": ["*"]
+        "@/*": ["src/*"]
       }
-    }
+    },
+    "exclude": ["node_modules", "eslint.config.ts"]
   }
